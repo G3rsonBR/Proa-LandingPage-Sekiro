@@ -7,6 +7,7 @@
 
 body {
   width: 100%;
+  height: 100vh;
   background-image: url(assets/bg.jpg);
   background-position: center;
   background-size: cover;
@@ -111,7 +112,7 @@ form {
   align-items: center;
   justify-content: space-evenly;
   width: 350px;
-  height: 380px;
+  min-height: 380px;
   background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
   border-radius: 10px;
   padding: 25px;
@@ -157,6 +158,11 @@ form p a:hover{
 }
 
 @media screen and (max-width: 1060px) {
+  main {
+    justify-content: unset;
+    gap: 50px;
+  }
+
   main .content, main .description, main h1 {
     width: 100%;
   }
@@ -181,7 +187,7 @@ form p a:hover{
   
   main {
     height: 100%;
-    padding: 0 30px 25px;
+    padding: 0 30px 50px;
     flex-direction: column;
   }
   main .content {
