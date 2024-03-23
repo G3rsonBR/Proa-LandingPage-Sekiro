@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  background-image: url(assets/bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.logo {
+  color: #ebebeb;
+  font-size: 35px;
+  padding: 10px 20px;
+  float: left;
+}
+
+ul, header{
+  display: flex;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 0 60px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+}
+
+ul {
+  gap: 3rem;
+}
+
+ul li {
+  list-style: none;
+  font-size: 14px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: #ebebeb;
+  font-weight: bold;
+  transition: .4s ease-in-out;
+}
+
+ul li a:hover {
+  color: #e28b8b;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  color: #fff;
+  gap: 20px;
+}
+
+main .content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+main .description {
+  width: 600px;
+  letter-spacing: 1.2px;
+  line-height: 30px;
+}
+
+main h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+}
+
+main .btn {
+  width: 160px;
+  height: 40px;
+  background-color: #af3612;
+  border: none;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: .4s ease-in-out;
+}
+
+main .btn a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+main .btn:hover{
+  background-color: #831f06;
+}
+
+main span {
+  color: #f8542b;
+  font-size: 60px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 350px;
+  height: 380px;
+  background: linear-gradient(to top, rgba(0,0,0,0.8)50%, rgba(0,0,0,0.8)50%);
+  border-radius: 10px;
+  padding: 25px;
+}
+
+form h2 {
+  width: 100%;
+  text-align: center;
+  color: #f8542b;
+  font-weight: bolder;
+  font-size: 22px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 15px 0;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  width: 100%;
+}
+
+form label input {
+  width: 100%;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+form p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form p a{
+  color: #fff;
+  transition: .3s ease-in-out;
+}
+
+form p a:hover{
+  color: #fc643f;
+}
+
+@media screen and (max-width: 1060px) {
+  main .content, main .description, main h1 {
+    width: 100%;
+  }
+  main h1, main span {
+    font-size: clamp(1rem, 1rem + 3vw, 3rem);
+  }
+}
+
+@media screen and (max-width: 660px) {
+  body {
+    background-position: 25%;
+  }
+  
+  header {
+    padding: 0;
+    position: inherit;
+  }
+
+  header nav {
+    display: none;
+  }
+  
+  main {
+    height: 100%;
+    padding: 0 30px 25px;
+    flex-direction: column;
+  }
+  main .content {
+    align-items: center;
+  }
+
+  form {
+    width: 100%;
+  }
+}
